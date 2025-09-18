@@ -31,19 +31,21 @@ const Navigation = () => {
 
   return (
     <nav
-      className={`fixed top-0 w-full z-50 transition-all duration-300 ${
+      className={`fixed top-0 w-full z-50 transition-smooth ${
         isScrolled
-          ? "bg-background/95 backdrop-blur-md shadow-card"
+          ? "glass-effect shadow-glow"
           : "bg-transparent"
       }`}
     >
-      <div className="container mx-auto px-6 py-4">
+      <div className="container mx-auto px-4 sm:px-6 py-4">
         <div className="flex items-center justify-between">
           <div
-            className="text-xl font-bold cursor-pointer transition-colors hover:text-primary"
+            className="text-xl sm:text-2xl font-bold cursor-pointer transition-smooth hover:text-primary animate-glow"
             onClick={() => scrollToSection("hero")}
           >
-            Portfolio
+            <span className="bg-gradient-to-r from-primary to-primary-glow bg-clip-text text-transparent">
+              Alex.dev
+            </span>
           </div>
 
           {/* Desktop Navigation */}
@@ -52,7 +54,9 @@ const Navigation = () => {
               <button
                 key={item.id}
                 onClick={() => scrollToSection(item.id)}
-                className="text-foreground/80 hover:text-primary transition-colors duration-200"
+                className="relative text-foreground/80 hover:text-primary transition-smooth duration-300 font-medium
+                         after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-primary 
+                         after:transition-smooth hover:after:w-full"
               >
                 {item.label}
               </button>
@@ -63,7 +67,7 @@ const Navigation = () => {
           <Button
             variant="ghost"
             size="icon"
-            className="md:hidden"
+            className="md:hidden glass-effect hover:shadow-glow transition-smooth"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           >
             {isMobileMenuOpen ? <X size={20} /> : <Menu size={20} />}
@@ -72,13 +76,13 @@ const Navigation = () => {
 
         {/* Mobile Navigation */}
         {isMobileMenuOpen && (
-          <div className="md:hidden mt-4 pb-4 border-t border-border">
-            <div className="flex flex-col space-y-3 pt-4">
+          <div className="md:hidden mt-4 pb-4 glass-effect rounded-lg animate-fade-up">
+            <div className="flex flex-col space-y-3 p-4">
               {navItems.map((item) => (
                 <button
                   key={item.id}
                   onClick={() => scrollToSection(item.id)}
-                  className="text-left text-foreground/80 hover:text-primary transition-colors duration-200 py-2"
+                  className="text-left text-foreground/80 hover:text-primary transition-smooth duration-200 py-3 px-2 rounded-lg hover:bg-muted/20"
                 >
                   {item.label}
                 </button>

@@ -61,15 +61,28 @@ export default {
       },
       backgroundImage: {
         "hero-gradient": "var(--hero-gradient)",
+        "hero-glow": "var(--hero-glow)",
         "section-gradient": "var(--section-gradient)",
+        "card-gradient": "var(--card-gradient)",
+      },
+      backgroundColor: {
+        "glass": "var(--glass-bg)",
+      },
+      borderColor: {
+        "glass": "var(--glass-border)",
       },
       boxShadow: {
         card: "var(--card-shadow)",
         "card-hover": "var(--card-shadow-hover)",
+        glow: "var(--glow-shadow)",
+      },
+      backdropBlur: {
+        glass: "20px",
       },
       transitionTimingFunction: {
         smooth: "var(--transition-smooth)",
         bounce: "var(--transition-bounce)",
+        elastic: "var(--transition-elastic)",
       },
       borderRadius: {
         lg: "var(--radius)",

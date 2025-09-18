@@ -8,42 +8,50 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    --background: 0 0% 99%;
-    --foreground: 220 15% 20%;
+    /* Dark theme as default */
+    --background: 222 84% 4.9%;
+    --foreground: 210 40% 98%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 220 15% 20%;
+    --card: 222 84% 6%;
+    --card-foreground: 210 40% 98%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 220 15% 20%;
+    --popover: 222 84% 6%;
+    --popover-foreground: 210 40% 98%;
 
-    --primary: 220 90% 56%;
-    --primary-foreground: 0 0% 100%;
-    --primary-glow: 220 90% 70%;
+    --primary: 268 83% 58%;
+    --primary-foreground: 210 40% 98%;
+    --primary-glow: 268 83% 70%;
+    --primary-dark: 268 83% 45%;
 
-    --secondary: 220 15% 96%;
-    --secondary-foreground: 220 15% 20%;
+    --secondary: 217 32% 17%;
+    --secondary-foreground: 210 40% 98%;
 
-    --muted: 220 15% 96%;
-    --muted-foreground: 220 10% 46%;
+    --muted: 217 32% 15%;
+    --muted-foreground: 215 20% 65%;
 
-    --accent: 220 90% 56%;
-    --accent-foreground: 0 0% 100%;
+    --accent: 268 83% 58%;
+    --accent-foreground: 210 40% 98%;
 
-    --destructive: 0 84% 60%;
-    --destructive-foreground: 0 0% 100%;
+    --destructive: 0 63% 31%;
+    --destructive-foreground: 210 40% 98%;
 
-    --border: 220 15% 91%;
-    --input: 220 15% 91%;
-    --ring: 220 90% 56%;
+    --border: 217 32% 20%;
+    --input: 217 32% 18%;
+    --ring: 268 83% 58%;
 
-    /* Portfolio-specific design tokens */
-    --hero-gradient: linear-gradient(135deg, hsl(220 90% 56%), hsl(240 90% 66%));
-    --section-gradient: linear-gradient(180deg, hsl(0 0% 99%), hsl(220 15% 98%));
-    --card-shadow: 0 4px 20px -2px hsl(220 90% 56% / 0.1);
-    --card-shadow-hover: 0 8px 32px -4px hsl(220 90% 56% / 0.2);
-    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    --transition-bounce: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    /* Enhanced portfolio design tokens */
+    --hero-gradient: linear-gradient(135deg, hsl(268 83% 58%), hsl(285 85% 55%), hsl(220 90% 56%));
+    --hero-glow: radial-gradient(circle at 50% 50%, hsl(268 83% 58% / 0.3) 0%, transparent 50%);
+    --section-gradient: linear-gradient(180deg, hsl(222 84% 4.9%), hsl(217 32% 6%));
+    --card-gradient: linear-gradient(145deg, hsl(217 32% 8%), hsl(217 32% 12%));
+    --glass-bg: hsl(217 32% 15% / 0.8);
+    --glass-border: hsl(210 40% 98% / 0.1);
+    --card-shadow: 0 8px 32px -8px hsl(268 83% 58% / 0.2);
+    --card-shadow-hover: 0 16px 48px -12px hsl(268 83% 58% / 0.4);
+    --glow-shadow: 0 0 40px hsl(268 83% 58% / 0.3);
+    --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    --transition-elastic: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 
     --radius: 0.5rem;
 
@@ -115,10 +123,39 @@ All colors MUST be HSL.
 
 @layer utilities {
   .animate-fade-in {
-    animation: fade-in 0.8s ease-out;
+    animation: fade-in 1s ease-out;
+  }
+
+  .animate-fade-up {
+    animation: fade-up 0.8s ease-out;
+  }
+
+  .animate-glow {
+    animation: glow 2s ease-in-out infinite alternate;
+  }
+
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  .glass-effect {
+    background: var(--glass-bg);
+    backdrop-filter: blur(20px);
+    border: 1px solid var(--glass-border);
   }
 
   @keyframes fade-in {
+    0% {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes fade-up {
     0% {
       opacity: 0;
       transform: translateY(20px);
@@ -126,6 +163,37 @@ All colors MUST be HSL.
     100% {
       opacity: 1;
       transform: translateY(0);
+    }
+  }
+
+  @keyframes glow {
+    0% {
+      box-shadow: 0 0 20px hsl(268 83% 58% / 0.5);
+    }
+    100% {
+      box-shadow: 0 0 40px hsl(268 83% 58% / 0.8);
+    }
+  }
+
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-20px);
+    }
+  }
+
+  /* Responsive grid utilities */
+  .grid-responsive {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+  }
+
+  @media (max-width: 768px) {
+    .grid-responsive {
+      grid-template-columns: 1fr;
     }
   }
 }

@@ -7,7 +7,7 @@ const About = () => {
     {
       icon: Code2,
       title: "Frontend Development",
-      description: "React, TypeScript, Next.js, Vue.js, HTML5, CSS3",
+      description: "React, TypeScript, Next.js, Vue.js, Tailwind CSS",
     },
     {
       icon: Database,
@@ -32,47 +32,60 @@ const About = () => {
   ];
 
   return (
-    <section id="about" className="py-20 bg-section-gradient">
-      <div className="container mx-auto px-6">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">About Me</h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Dedicated to crafting exceptional digital experiences through code
-          </p>
+    <section id="about" className="py-16 sm:py-20 lg:py-24 bg-section-gradient">
+      <div className="container mx-auto px-4 sm:px-6">
+        <div className="text-center mb-12 sm:mb-16">
+          <div className="animate-fade-up">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">
+              <span className="bg-gradient-to-r from-foreground to-primary bg-clip-text text-transparent">
+                About Me
+              </span>
+            </h2>
+            <div className="w-20 h-1 bg-gradient-to-r from-primary to-primary-glow mx-auto mb-6 rounded-full" />
+            <p className="text-base sm:text-lg text-muted-foreground max-w-2xl mx-auto">
+              Dedicated to crafting exceptional digital experiences through innovative code
+            </p>
+          </div>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
+        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           {/* About Content */}
-          <div>
-            <div className="mb-8">
-              <img
-                src={profileImage}
-                alt="Profile"
-                className="w-48 h-48 rounded-2xl object-cover mx-auto lg:mx-0 mb-6 shadow-card"
-              />
+          <div className="animate-fade-up order-2 lg:order-1">
+            <div className="mb-8 text-center lg:text-left">
+              <div className="relative inline-block">
+                <img
+                  src={profileImage}
+                  alt="Alex Johnson Profile"
+                  className="w-48 h-48 sm:w-56 sm:h-56 rounded-2xl object-cover shadow-glow animate-float"
+                />
+                <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-primary/20 to-transparent" />
+              </div>
             </div>
             
-            <div className="space-y-6">
-              <p className="text-lg leading-relaxed text-muted-foreground">
+            <div className="space-y-6 text-center lg:text-left">
+              <p className="text-base sm:text-lg leading-relaxed text-muted-foreground">
                 I'm a passionate Software Development Engineer II with over 3 years of experience 
                 building scalable web applications. I specialize in full-stack development with 
-                a focus on creating efficient, user-friendly solutions.
+                a focus on creating efficient, user-friendly solutions that make a real impact.
               </p>
               
-              <p className="text-lg leading-relaxed text-muted-foreground">
+              <p className="text-base sm:text-lg leading-relaxed text-muted-foreground">
                 My expertise spans across modern web technologies, cloud platforms, and 
-                development best practices. I enjoy tackling complex problems and turning 
-                ideas into reality through clean, maintainable code.
+                development best practices. I thrive on tackling complex problems and turning 
+                innovative ideas into reality through clean, maintainable code.
               </p>
             </div>
 
             <div className="mt-8">
-              <h3 className="text-xl font-semibold mb-4">Technologies I work with:</h3>
-              <div className="flex flex-wrap gap-2">
+              <h3 className="text-lg sm:text-xl font-semibold mb-4 text-center lg:text-left">
+                Technologies I work with:
+              </h3>
+              <div className="flex flex-wrap gap-2 justify-center lg:justify-start">
                 {technologies.map((tech, index) => (
                   <span
                     key={index}
-                    className="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm font-medium"
+                    className="px-3 py-1 glass-effect text-primary rounded-full text-sm font-medium hover:shadow-glow transition-smooth animate-fade-up"
+                    style={{ animationDelay: `${index * 0.1}s` }}
                   >
                     {tech}
                   </span>
@@ -82,25 +95,30 @@ const About = () => {
           </div>
 
           {/* Skills Grid */}
-          <div className="grid sm:grid-cols-2 gap-6">
-            {skills.map((skill, index) => (
-              <Card
-                key={index}
-                className="group hover:shadow-card-hover transition-smooth border-border/50 hover:border-primary/20"
-              >
-                <CardContent className="p-6">
-                  <div className="flex items-center mb-4">
-                    <div className="p-3 rounded-lg bg-primary/10 group-hover:bg-primary/20 transition-smooth">
-                      <skill.icon className="h-6 w-6 text-primary" />
+          <div className="order-1 lg:order-2">
+            <div className="grid sm:grid-cols-2 gap-4 sm:gap-6">
+              {skills.map((skill, index) => (
+                <Card
+                  key={index}
+                  className="group glass-effect hover:shadow-card-hover transition-smooth border-glass animate-fade-up transform hover:scale-105"
+                  style={{ animationDelay: `${index * 0.2}s` }}
+                >
+                  <CardContent className="p-4 sm:p-6">
+                    <div className="flex items-center mb-4">
+                      <div className="p-3 rounded-xl bg-card-gradient group-hover:shadow-glow transition-smooth">
+                        <skill.icon className="h-6 w-6 text-primary" />
+                      </div>
                     </div>
-                  </div>
-                  <h3 className="text-lg font-semibold mb-2">{skill.title}</h3>
-                  <p className="text-muted-foreground text-sm leading-relaxed">
-                    {skill.description}
-                  </p>
-                </CardContent>
-              </Card>
-            ))}
+                    <h3 className="text-base sm:text-lg font-semibold mb-2 group-hover:text-primary transition-smooth">
+                      {skill.title}
+                    </h3>
+                    <p className="text-muted-foreground text-sm leading-relaxed">
+                      {skill.description}
+                    </p>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
           </div>
         </div>
       </div>
