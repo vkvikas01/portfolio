@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
-import { Mail, MapPin, Phone, Github, Linkedin, Twitter, Send, MessageCircle } from "lucide-react";
+import { Mail, MapPin, Phone, Github, Linkedin, Twitter, Send, MessageCircle,X   } from "lucide-react";
 import { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
 
@@ -43,19 +43,19 @@ const Contact = () => {
     {
       icon: Mail,
       label: "Email",
-      value: "alex.johnson@example.com",
-      href: "mailto:alex.johnson@example.com",
+      value: "vikassharma26543@gmail.com",
+      href: "mailto:vikassharma26543@gmail.com",
     },
     {
       icon: Phone,
       label: "Phone",
-      value: "+1 (555) 123-4567",
-      href: "tel:+15551234567",
+      value: "+91 8595010795",
+      href: "tel:+918595010795",
     },
     {
       icon: MapPin,
       label: "Location",
-      value: "San Francisco, CA",
+      value: "New Delhi,Delhi",
       href: "#",
     },
   ];
@@ -64,17 +64,17 @@ const Contact = () => {
     {
       icon: Github,
       label: "GitHub",
-      href: "https://github.com/alexjohnson",
+      href: "https://github.com/vkvikas01?tab=repositories",
     },
     {
       icon: Linkedin,
       label: "LinkedIn",
-      href: "https://linkedin.com/in/alexjohnson",
+      href: "https://www.linkedin.com/in/vikas-sharma-34977a1b6/",
     },
     {
-      icon: Twitter,
-      label: "Twitter",
-      href: "https://twitter.com/alexjohnson",
+      icon: X,
+      label: "X",
+      href: "https://x.com/vikassh88195636",
     },
   ];
 

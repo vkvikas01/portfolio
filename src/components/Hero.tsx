@@ -1,4 +1,4 @@
-import { ArrowDown, Github, Linkedin, Mail, Sparkles } from "lucide-react";
+import { ArrowDown, Github, Linkedin, Mail, Sparkles,Code  } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import heroImage from "@/assets/hero-bg.jpg";
 
@@ -21,8 +21,8 @@ const Hero = () => {
         style={{ backgroundImage: `url(${heroImage})` }}
       />
       
-      <div className="absolute inset-0 bg-hero-gradient" />
-      <div className="absolute inset-0 bg-hero-glow" />
+      {/* <div className="absolute inset-0 bg-hero-gradient" />
+      <div className="absolute inset-0 bg-hero-glow" /> */}
       
       {/* Floating Elements */}
       <div className="absolute top-20 left-10 w-20 h-20 bg-primary/20 rounded-full animate-float" />
@@ -33,23 +33,23 @@ const Hero = () => {
         <div className="text-center max-w-5xl mx-auto">
           <div className="animate-fade-in">
             {/* Badge */}
-            <div className="inline-flex items-center gap-2 glass-effect rounded-full px-4 py-2 mb-8 animate-glow">
+            {/* <div className="inline-flex items-center gap-2 glass-effect rounded-full px-4 py-2 mb-8 animate-glow">
               <Sparkles className="w-4 h-4 text-primary" />
               <span className="text-sm font-medium">Available for hire</span>
-            </div>
+            </div> */}
 
             <h2 className="text-lg sm:text-xl md:text-2xl text-primary-glow mb-4 font-medium animate-fade-up">
               Hello, I'm
             </h2>
             <h1 className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-bold mb-6 tracking-tight animate-fade-up">
               <span className="bg-gradient-to-r from-foreground via-primary-glow to-primary bg-clip-text text-transparent">
-                Alex Johnson
+                Vikas Sharma
               </span>
             </h1>
             <div className="relative mb-8 animate-fade-up">
               <p className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-semibold mb-4">
                 <span className="bg-gradient-to-r from-primary to-primary-glow bg-clip-text text-transparent">
-                  Software Development Engineer II
+                  Software Developer
                 </span>
               </p>
               <div className="w-24 h-1 bg-gradient-to-r from-primary to-primary-glow mx-auto rounded-full" />
@@ -82,9 +82,10 @@ const Hero = () => {
           {/* Social Links */}
           <div className="flex justify-center space-x-8 mb-16 animate-fade-up">
             {[
-              { icon: Github, href: "https://github.com", label: "GitHub" },
-              { icon: Linkedin, href: "https://linkedin.com", label: "LinkedIn" },
-              { icon: Mail, href: "mailto:alex@example.com", label: "Email" }
+              { icon: Github, href: "https://github.com/vkvikas01?tab=repositories", label: "GitHub" },
+              { icon: Linkedin, href: "https://www.linkedin.com/in/vikas-sharma-34977a1b6/", label: "LinkedIn" },
+              { icon: Mail, href: "https://mail.google.com/mail/?view=cm&fs=1&to=vikassharma26543@gmail.com", label: "Email" },
+              { icon: Code, href: "https://leetcode.com/u/vikassharma26543/", label: "Leetcode" }
             ].map((social, index) => (
               <a
                 key={index}
@@ -92,7 +93,7 @@ const Hero = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center justify-center w-12 h-12 sm:w-14 sm:h-14 glass-effect rounded-full text-foreground/70 hover:text-primary transition-smooth hover:shadow-glow transform hover:scale-110 animate-float"
-                style={{ animationDelay: `${index * 0.5}s` }}
+                style={{ animationDelay: `${index * 1}s` }}
                 title={social.label}
               >
                 <social.icon size={24} />

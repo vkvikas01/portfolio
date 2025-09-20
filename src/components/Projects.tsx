@@ -10,7 +10,7 @@ const Projects = () => {
       description: "Full-stack e-commerce solution with real-time inventory management, payment processing, and admin dashboard. Built for scalability with microservices architecture.",
       technologies: ["React", "Node.js", "PostgreSQL", "Redis", "AWS", "Docker"],
       liveLink: "https://demo-ecommerce.com",
-      githubLink: "https://github.com/username/ecommerce",
+      githubLink: "https://github.com/vkvikas01/ecomerce_website",
       featured: true,
     },
     {
@@ -26,7 +26,7 @@ const Projects = () => {
       description: "Interactive weather application with location-based forecasts, historical data visualization, and severe weather alerts using multiple weather APIs.",
       technologies: ["React", "TypeScript", "Chart.js", "Weather API"],
       liveLink: "https://weather-app-demo.com",
-      githubLink: "https://github.com/username/weather-app",
+      githubLink: "https://github.com/vkvikas01/news-APP",
       featured: false,
     },
     {
@@ -34,7 +34,7 @@ const Projects = () => {
       description: "Analytics dashboard for social media performance tracking with automated reporting, engagement metrics, and competitor analysis.",
       technologies: ["Python", "Django", "React", "D3.js", "PostgreSQL"],
       liveLink: "https://analytics-demo.com",
-      githubLink: "https://github.com/username/analytics",
+      githubLink: "https://github.com/vkvikas01/socialmediaapp",
       featured: false,
     },
   ];

@@ -1,34 +1,34 @@
 import { Code2, Database, Globe, Smartphone } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
-import profileImage from "@/assets/profile-placeholder.jpg";
+import profileImage from "@/assets/profile-placeholder.png";
 
 const About = () => {
   const skills = [
     {
       icon: Code2,
       title: "Frontend Development",
-      description: "React, TypeScript, Next.js, Vue.js, Tailwind CSS",
+      description: "React, TypeScript, JavaScript, Vite, Next.js, Vue.js, Tailwind CSS",
     },
     {
       icon: Database,
       title: "Backend Development",
-      description: "Node.js, Python, Java, REST APIs, GraphQL",
+      description: "Node.js, Express.js, Python, Java, REST APIs, GraphQL",
     },
     {
       icon: Globe,
       title: "Cloud & DevOps",
-      description: "AWS, Docker, Kubernetes, CI/CD, Jenkins",
+      description: "AWS, Docker, Kubernetes, CI/CD",
     },
     {
       icon: Smartphone,
       title: "Mobile Development",
-      description: "React Native, Flutter, iOS, Android",
+      description: "React Native, Fullter",
     },
   ];
 
   const technologies = [
-    "JavaScript", "TypeScript", "React", "Node.js", "Python", "Java",
-    "AWS", "Docker", "MongoDB", "PostgreSQL", "Redis", "Git"
+    "JavaScript", "TypeScript", "React","Next","Express.js", "Node.js", "Python", "Java",
+    "AWS", "Docker", "MongoDB", "PostgreSQL", "Redis", "Git","Jest","RTL"
   ];
 
   return (

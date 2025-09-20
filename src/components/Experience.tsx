@@ -4,44 +4,36 @@ import { MapPin, Calendar, Building2 } from "lucide-react";
 
 const Experience = () => {
   const experiences = [
+   
     {
-      title: "Software Development Engineer II",
-      company: "TechCorp Solutions",
-      location: "San Francisco, CA",
-      period: "Jan 2023 - Present",
+      title: "Software Developer",
+      company: "Pocketful",
+      location: "Delhi",
+      period: "July 2023 - Present",
       description: [
-        "Lead development of microservices architecture serving 2M+ users",
-        "Implemented CI/CD pipelines reducing deployment time by 60%",
-        "Mentored 3 junior developers and conducted code reviews",
-        "Optimized database queries improving application performance by 40%",
+        "Designed and developed the Option Chain module with real-time updates",
+        "Built a complex Order Window handling multiple order types and workflows",
+        "Integrated live market data streams using WebSockets for fast execution",
+        "Optimized React components to improve performance and reduce re-renders",
+        "Collaborated with backend teams to streamline API usage and data flow",
+        "Enhanced user interface responsiveness and improved trading experience",
       ],
-      technologies: ["React", "Node.js", "AWS", "Docker", "PostgreSQL"],
+      technologies: ["React", "TypeScript", "JavaScript", "jest", "Vite", "RTL"],
     },
     {
-      title: "Software Development Engineer I",
-      company: "StartupXYZ",
-      location: "Austin, TX",
-      period: "Jun 2021 - Dec 2022",
+      title: "Software Engineer Intern",
+      company: "Pace Stock Broking",
+      location: "Delhi",
+      period: "Jan 2023 - June 2023",
       description: [
-        "Developed and maintained full-stack web applications using React and Node.js",
-        "Collaborated with cross-functional teams to deliver features on schedule",
-        "Implemented responsive designs and improved user experience",
-        "Built RESTful APIs and integrated third-party services",
+        "Built and optimized landing pages with modern web technologies",
+        "Developed interactive and user-friendly UI components",
+        "Created and maintained a Chrome extension for custom needs",
+        "Worked on SEO optimization to improve site performance",
+        "Implemented server-side rendering and routing with Next.js",
+        "Integrated Google Sheets APIs for dynamic data handling",
       ],
-      technologies: ["React", "TypeScript", "MongoDB", "Express.js", "Git"],
-    },
-    {
-      title: "Junior Software Engineer",
-      company: "Digital Innovations Inc",
-      location: "Remote",
-      period: "Jan 2021 - May 2021",
-      description: [
-        "Contributed to frontend development using modern JavaScript frameworks",
-        "Participated in agile development processes and sprint planning",
-        "Fixed bugs and implemented minor features",
-        "Learned industry best practices for software development",
-      ],
-      technologies: ["JavaScript", "Vue.js", "CSS3", "HTML5", "Jenkins"],
+      technologies: ["JavaScript", "Next.js", "CSS3", "HTML5"],
     },
   ];
 
